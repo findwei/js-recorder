@@ -1,7 +1,7 @@
 /*
  * @Author: webberQian
  * @Date: 2024-11-20 10:58:57
- * @LastEditTime: 2024-11-26 14:12:15
+ * @LastEditTime: 2024-11-27 16:09:48
  * @LastEditors: webberQian
  * @Description:
  * 没有理想，何必远方。
@@ -26,6 +26,7 @@ export default defineConfig({
     }),
   ],
   root: "./example",
+  base: "/js-recorder",
   server: {
     port: 5180,
   },
