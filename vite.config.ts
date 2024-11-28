@@ -20,7 +20,7 @@ export default defineConfig({
       rollupTypes: true,
       tsconfigPath: "./tsconfig.lib.json",
       outDir: "./dist/types",
-      insertTypesEntry: true // 自动插入 types 字段到 package.json
+      insertTypesEntry: true, // 自动插入 types 字段到 package.json
     }),
   ],
   server: {
@@ -31,8 +31,8 @@ export default defineConfig({
       formats: ["es", "umd"],
       entry: resolve(__dirname, "src/index.ts"),
       // entry: "src/index.ts",
-      name: "jsRecorder",
-      fileName: (format) => `js-recorder-library.${format}.js`,
+      name: "jsRecorderRtc",
+      fileName: (format) => `js-recorder-rtc-library.${format}.js`,
     },
     rollupOptions: {
       plugins: [

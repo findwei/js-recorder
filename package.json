@@ -1,5 +1,5 @@
 {
-  "name": "js-recorder",
+  "name": "js-recorder-rtc",
   "author": "webberQian",
   "version": "0.0.1",
   "type": "module",
@@ -13,29 +13,39 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  "main": "./dist/js-recorder-library.umd.js",
-  "module": "./dist/js-recorder-library.es.js",
+  "main": "./dist/js-recorder-rtc-library.umd.js",
+  "module": "./dist/js-recorder-rtc-library.es.js",
   "browser": {
-    "./dist/js-recorder-library.es.js": "./dist/js-recorder-library.es.js",
-    "./dist/js-recorder-library.umd.js": "./dist/js-recorder-library.umd.js"
+    "./dist/js-recorder-rtc-library.es.js": "./dist/js-recorder-rtc-library.es.js",
+    "./dist/js-recorder-rtc-library.umd.js": "./dist/js-recorder-rtc-library.umd.js"
   },
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/js-recorder-library.es.js",
-      "require": "./dist/js-recorder-library.umd.js",
+      "import": "./dist/js-recorder-rtc-library.es.js",
+      "require": "./dist/js-recorder-rtc-library.umd.js",
       "types": "./dist/types/index.d.ts"
     }
   },
   "files": [
     "/dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/findwei/js-recorder.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/findwei/js-recorder/issues"
+  },
+  "homepage": "https://findwei.github.io/js-recorder/",
   "keywords": [
     "audio",
     "webaudio",
     "pcm",
     "wav",
     "js-recorder",
+    "js-recorder-rtc",
     "audio-recorder",
     "web-recorder",
     "前端录音",
@@ -44,10 +54,7 @@
     "js-录音库",
     "录音"
   ],
-  "dependencies": {
-    "element-plus": "^2.8.8",
-    "vue": "^3.5.12"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.1",
     "@types/dom-webcodecs": "^0.1.13",
@@ -62,6 +69,8 @@
     "vite": "^5.4.10",
     "vite-plugin-dts": "^4.3.0",
     "vitepress": "^1.5.0",
-    "vue-tsc": "^2.1.8"
+    "vue-tsc": "^2.1.8",
+    "element-plus": "^2.8.8",
+    "vue": "^3.5.12"
   }
 }
