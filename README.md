@@ -18,7 +18,7 @@
 
 ## 快速上手
 
-- 模块化使用
+### 模块化使用
 
 1. 安装依赖包
    ```ts
@@ -91,9 +91,19 @@
    };
 
    ```
-- 浏览器端使用
+### 浏览器直接使用
+  
+下载 https://github.com/findwei/js-recorder/blob/main/dist/js-recorder-rtc-library.umd.js
    ```js
-   <script src="./dist/js-recorder-rtc.min.js"></script>
-   // jsRecorderRtc对象在window对象下 
+   <script src="./js-recorder-rtc-library.umd.js"></script>
+   // jsRecorderRtc对象会挂载在window对象下面 
+   ```
+   ```js
+   let recorder = new window.jsRecorderRtc.Recorder({
+      sampleRate: 16000, // 采样率
+      sampleBits: 8, // 采样位数
+      channels: 1, // 声道
+      bufferSize: 4096, // 缓存大小
+   })
    ```
 
