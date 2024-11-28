@@ -4,8 +4,8 @@ import { reactive, watch, watchEffect } from "vue";
 // import { Recorder } from "./lib/Recorder";
 // import { RecorderConfig, RecorderStatus } from "./lib/types/Recorder";
 
-import { Recorder } from "js-recorder";
-import type { RecorderConfig } from "js-recorder";
+import { Recorder } from "js-recorder-rtc";
+import type { RecorderConfig } from "js-recorder-rtc";
 const form = reactive<RecorderConfig>({
   sampleRate: 16000,
   sampleBits: 8,

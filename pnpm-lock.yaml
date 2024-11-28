@@ -29,6 +29,9 @@ importers:
       element-plus:
         specifier: ^2.8.8
         version: 2.8.8(vue@3.5.13(typescript@5.6.3))
+      js-recorder-rtc:
+        specifier: ^0.0.1
+        version: 0.0.1
       tslib:
         specifier: ^2.8.1
         version: 2.8.1
@@ -189,6 +192,12 @@ packages:
     cpu: [ppc64]
     os: [aix]
 
+  '@esbuild/android-arm64@0.21.5':
+    resolution: {integrity: sha512-c0uX9VAUBQ7dTDCjq+wdyGLowMdtR/GoC2U5IYk/7D1H1JYC0qseD7+11iMP2mRLN9RcCMRcjC4YMclCzGwS/A==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [android]
+
   '@esbuild/android-arm@0.21.5':
     resolution: {integrity: sha512-vCPvzSjpPHEi1siZdlvAlsPxXl7WbOVUBBAowWug4rJHb68Ox8KualB+1ocNvT5fjv6wpkX6o/iEpbDrf68zcg==}
     engines: {node: '>=12'}
@@ -213,11 +222,23 @@ packages:
     cpu: [x64]
     os: [darwin]
 
+  '@esbuild/freebsd-arm64@0.21.5':
+    resolution: {integrity: sha512-5JcRxxRDUJLX8JXp/wcBCy3pENnCgBR9bN6JsY4OmhfUtIHe3ZW0mawA7+RDAcMLrMIZaf03NlQiX9DGyB8h4g==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [freebsd]
+
   '@esbuild/freebsd-x64@0.21.5':
     resolution: {integrity: sha512-J95kNBj1zkbMXtHVH29bBriQygMXqoVQOQYA+ISs0/2l3T9/kj42ow2mpqerRBxDJnmkUDCaQT/dfNXWX/ZZCQ==}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [freebsd]
+
+  '@esbuild/linux-arm64@0.21.5':
+    resolution: {integrity: sha512-ibKvmyYzKsBeX8d8I7MH/TMfWDXBF3db4qM6sy+7re0YXya+K1cem3on9XgdT2EQGMu4hQyZhan7TeQ8XkGp4Q==}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [linux]
 
   '@esbuild/linux-arm@0.21.5':
     resolution: {integrity: sha512-bPb5AHZtbeNGjCKVZ9UGqGwo8EUu4cLq68E95A53KlxAPRmUyYv2D6F0uUI65XisGOL1hBP5mTronbgo+0bFcA==}
@@ -235,6 +256,12 @@ packages:
     resolution: {integrity: sha512-uHf1BmMG8qEvzdrzAqg2SIG/02+4/DHB6a9Kbya0XDvwDEKCoC8ZRWI5JJvNdUjtciBGFQ5PuBlpEOXQj+JQSg==}
     engines: {node: '>=12'}
     cpu: [loong64]
+    os: [linux]
+
+  '@esbuild/linux-mips64el@0.21.5':
+    resolution: {integrity: sha512-IajOmO+KJK23bj52dFSNCMsz1QP1DqM6cwLUv3W1QwyxkyIWecfafnI555fvSGqEKwjMXVLokcV5ygHW5b3Jbg==}
+    engines: {node: '>=12'}
+    cpu: [mips64el]
     os: [linux]
 
   '@esbuild/linux-ppc64@0.21.5':
@@ -396,46 +423,55 @@ packages:
     resolution: {integrity: sha512-h2Ay79YFXyQi+QZKo3ISZDyKaVD7uUvukEHTOft7kh00WF9mxAaxZsNs3o/eukbeKuH35jBvQqrT61fzKfAB/Q==}
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.27.3':
     resolution: {integrity: sha512-Sv2GWmrJfRY57urktVLQ0VKZjNZGogVtASAgosDZ1aUB+ykPxSi3X1nWORL5Jk0sTIIwQiPH7iE3BMi9zGWfkg==}
     cpu: [arm]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.27.3':
     resolution: {integrity: sha512-FPoJBLsPW2bDNWjSrwNuTPUt30VnfM8GPGRoLCYKZpPx0xiIEdFip3dH6CqgoT0RnoGXptaNziM0WlKgBc+OWQ==}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.27.3':
     resolution: {integrity: sha512-TKxiOvBorYq4sUpA0JT+Fkh+l+G9DScnG5Dqx7wiiqVMiRSkzTclP35pE6eQQYjP4Gc8yEkJGea6rz4qyWhp3g==}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.27.3':
     resolution: {integrity: sha512-v2M/mPvVUKVOKITa0oCFksnQQ/TqGrT+yD0184/cWHIu0LoIuYHwox0Pm3ccXEz8cEQDLk6FPKd1CCm+PlsISw==}
     cpu: [ppc64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.27.3':
     resolution: {integrity: sha512-LdrI4Yocb1a/tFVkzmOE5WyYRgEBOyEhWYJe4gsDWDiwnjYKjNs7PS6SGlTDB7maOHF4kxevsuNBl2iOcj3b4A==}
     cpu: [riscv64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-s390x-gnu@4.27.3':
     resolution: {integrity: sha512-d4wVu6SXij/jyiwPvI6C4KxdGzuZOvJ6y9VfrcleHTwo68fl8vZC5ZYHsCVPUi4tndCfMlFniWgwonQ5CUpQcA==}
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.27.3':
     resolution: {integrity: sha512-/6bn6pp1fsCGEY5n3yajmzZQAh+mW4QPItbiWxs69zskBzJuheb3tNynEjL+mKOsUSFK11X4LYF2BwwXnzWleA==}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.27.3':
     resolution: {integrity: sha512-nBXOfJds8OzUT1qUreT/en3eyOXd2EH5b0wr2bVB5999qHdGKkzGzIyKYaKj02lXk6wpN71ltLIaQpu58YFBoQ==}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-win32-arm64-msvc@4.27.3':
     resolution: {integrity: sha512-ogfbEVQgIZOz5WPWXF2HVb6En+kWzScuxJo/WdQTqEgeyGkaa2ui5sQav9Zkr7bnNCLK48uxmmK0TySm22eiuw==}
@@ -919,6 +955,9 @@ packages:
 
   jju@1.4.0:
     resolution: {integrity: sha512-8wb9Yw966OSxApiCt0K3yNJL8pnNeIv+OEq2YMidz4FKP6nonSRoOXc80iXY4JaN2FC11B9qsNmDsm+ZOfMROA==}
+
+  js-recorder-rtc@0.0.1:
+    resolution: {integrity: sha512-s3cuxxBsJmN5894zK2pRx3i1fUkRqK3ifECE346a+ZKeJPcV9dgmQmI+fLsdua8wR1OdShRRNZoN7JmxwLY4jQ==}
 
   js-tokens@9.0.0:
     resolution: {integrity: sha512-WriZw1luRMlmV3LGJaR6QOJjWwgLUTf89OwT2lUOyjX2dJGBwgmIkbcz+7WFZjrZM635JOIR517++e/67CP9dQ==}
@@ -1501,6 +1540,9 @@ snapshots:
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
 
+  '@esbuild/android-arm64@0.21.5':
+    optional: true
+
   '@esbuild/android-arm@0.21.5':
     optional: true
 
@@ -1513,7 +1555,13 @@ snapshots:
   '@esbuild/darwin-x64@0.21.5':
     optional: true
 
+  '@esbuild/freebsd-arm64@0.21.5':
+    optional: true
+
   '@esbuild/freebsd-x64@0.21.5':
+    optional: true
+
+  '@esbuild/linux-arm64@0.21.5':
     optional: true
 
   '@esbuild/linux-arm@0.21.5':
@@ -1523,6 +1571,9 @@ snapshots:
     optional: true
 
   '@esbuild/linux-loong64@0.21.5':
+    optional: true
+
+  '@esbuild/linux-mips64el@0.21.5':
     optional: true
 
   '@esbuild/linux-ppc64@0.21.5':
@@ -2123,13 +2174,17 @@ snapshots:
     optionalDependencies:
       '@esbuild/aix-ppc64': 0.21.5
       '@esbuild/android-arm': 0.21.5
+      '@esbuild/android-arm64': 0.21.5
       '@esbuild/android-x64': 0.21.5
       '@esbuild/darwin-arm64': 0.21.5
       '@esbuild/darwin-x64': 0.21.5
+      '@esbuild/freebsd-arm64': 0.21.5
       '@esbuild/freebsd-x64': 0.21.5
       '@esbuild/linux-arm': 0.21.5
+      '@esbuild/linux-arm64': 0.21.5
       '@esbuild/linux-ia32': 0.21.5
       '@esbuild/linux-loong64': 0.21.5
+      '@esbuild/linux-mips64el': 0.21.5
       '@esbuild/linux-ppc64': 0.21.5
       '@esbuild/linux-riscv64': 0.21.5
       '@esbuild/linux-s390x': 0.21.5
@@ -2241,6 +2296,8 @@ snapshots:
   is-what@4.1.16: {}
 
   jju@1.4.0: {}
+
+  js-recorder-rtc@0.0.1: {}
 
   js-tokens@9.0.0: {}
 
