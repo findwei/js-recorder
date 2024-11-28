@@ -11,6 +11,11 @@ on:
   # 允许你从 Actions 选项卡手动运行此工作流程
   workflow_dispatch:
 
+  workflow_run:
+    workflows: ["example static Pages"]  # 这里指定依赖的 workflow 名称
+    types:
+      - completed  # 无论 'example static Pages' 成功或失败，都触发这个工作流
+
 # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
 permissions:
   contents: read
@@ -59,15 +64,15 @@ jobs:
           target-folder: /js-recorder/docs
           token: ${{ secrets.GH_TOKEN }}
 
-  # 部署工作
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  # # 部署工作
+  # deploy:
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   name: Deploy
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
