@@ -51,7 +51,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # path: docs/.vitepress/dist
-          deploy_branch: gh-pages
+          # deploy_branch: gh-pages
           folder: docs/.vitepress/dist
           target_dir: /js-recorder/docs
 
