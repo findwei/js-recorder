@@ -57,7 +57,7 @@ jobs:
           branch: gh-pages
           folder: docs/.vitepress/dist
           target-folder: /js-recorder/docs
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
 
   # 部署工作
   deploy:
