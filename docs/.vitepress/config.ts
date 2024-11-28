@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/docs/",
+  base: "/js-recorder/docs/",
   title: "js-recorder",
   description: "js-recorder 是一个前端录音库支持下载pcm、wav和实时输出pcm",
   themeConfig: {
