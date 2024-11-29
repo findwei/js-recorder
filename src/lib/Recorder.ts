@@ -1,7 +1,7 @@
 /*
  * @Author: webberQian
  * @Date: 2024-11-11 17:54:59
- * @LastEditTime: 2024-11-25 14:05:46
+ * @LastEditTime: 2024-11-29 16:40:13
  * @LastEditors: webberQian
  * @Description: 录音器
  * 没有理想，何必远方。
@@ -23,9 +23,10 @@
 import { RecorderConfig, RecorderStatus } from "./types/Recorder";
 
 /**
- * 录音机类
- * 支持录制音频并导出为 PCM 或 WAV 格式
- * 支持配置采样率、采样位数、声道数等参数
+ * @name Recorder
+ * @deprecated 录音机类，支持录制音频并导出为 PCM 或 WAV 格式，支持配置采样率、采样位数、声道数等参数
+ * @export
+ * @class Recorder
  */
 export class Recorder {
   /**

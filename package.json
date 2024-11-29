@@ -1,7 +1,7 @@
 {
   "name": "js-recorder-rtc",
   "author": "webberQian",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -38,7 +38,7 @@
   "bugs": {
     "url": "https://github.com/findwei/js-recorder/issues"
   },
-  "homepage": "https://findwei.github.io/js-recorder/",
+  "homepage": "https://findwei.github.io/js-recorder/docs",
   "keywords": [
     "audio",
     "webaudio",

@@ -27,6 +27,7 @@ export default defineConfig({
     port: 3000,
   },
   build: {
+    assetsInlineLimit: 0,
     lib: {
       formats: ["es", "umd"],
       entry: resolve(__dirname, "src/index.ts"),
@@ -35,12 +36,7 @@ export default defineConfig({
       fileName: (format) => `js-recorder-rtc-library.${format}.js`,
     },
     rollupOptions: {
-      plugins: [
-        // typescript({
-        //   tsconfig: "./tsconfig.lib.json", // 确保指向正确的 tsconfig 文件
-        //   declaration: true, // 启用声明文件生成
-        // }),
-      ],
+      output: {},
     },
   },
 });

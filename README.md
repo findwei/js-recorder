@@ -10,11 +10,7 @@
 
 ## 在线demo
 
-   https://findwei.github.io/js-recorder/
-
-## 在线文档
-
- https://github.com/findwei/js-recorder/blob/master/README.md
+[DEMO](https://findwei.github.io/js-recorder/)
 
 ## 快速上手
 
@@ -91,19 +87,31 @@
    };
 
    ```
+
 ### 浏览器直接使用
   
-下载 https://github.com/findwei/js-recorder/blob/main/dist/js-recorder-rtc-library.umd.js
-   ```js
-   <script src="./js-recorder-rtc-library.umd.js"></script>
-   // jsRecorderRtc对象会挂载在window对象下面 
-   ```
-   ```js
-   let recorder = new window.jsRecorderRtc.Recorder({
-      sampleRate: 16000, // 采样率
-      sampleBits: 8, // 采样位数
-      channels: 1, // 声道
-      bufferSize: 4096, // 缓存大小
-   })
-   ```
+在线cdn https://cdn.jsdelivr.net/npm/js-recorder-rtc@0.0.1/dist/js-recorder-rtc-library.umd.js
+   
+```js
+<script src="https://cdn.jsdelivr.net/npm/js-recorder-rtc@0.0.1/dist/js-recorder-rtc-library.umd.js"></script>
+// jsRecorderRtc对象会挂载在window对象下面 
+```
+```js
+let recorder = new window.jsRecorderRtc.Recorder({
+   sampleRate: 16000, // 采样率
+   sampleBits: 8, // 采样位数
+   channels: 1, // 声道
+   bufferSize: 4096, // 缓存大小
+})
+```
 
+## API文档
+
+[API文档](https://findwei.github.io/js-recorder/docs)
+
+
+## 注意
+
+**本地调试请使用`127.0.0.1`或者`localhost`**
+
+**由于浏览器限制，线上环境需配置https**

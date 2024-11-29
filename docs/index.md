@@ -3,23 +3,22 @@
 layout: home
 
 hero:
-  name: "js-recorder"
-  text: "前端录音库支持下载pcm、wav和实时输出pcm"
+  name: "js-recorder-rtc"
+  text: "高效的前端录音库 \n webworker模式 \n 传统方式"
   tagline: My great project tagline
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: API文档
+      link: /api
     - theme: alt
-      text: API Examples
-      link: /api-examples
-
+      text: 安装
+      link: /install
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 实时输出PCM
+    details: 实时输出PCM数据，方便做音频处理和送去识别
+  - title: 暂停 与 恢复
+    details:  录音可打断，暂停与恢复
+  - title: PCM、WAV
+    details: 支持下载PCM、WAV文件
 ---
 
